@@ -1,0 +1,37 @@
+US airports network, part of the Koblenz Network Collection
+===========================================================================
+
+This folder contains the TSV and related files of the opsahl-usairport network:
+
+This is the directed network of flights between US airports in 2010. A directed edge represents a connection from one airport to another. The weight of an edge shows how many passengers have been transported in total on that connection, cumulated over all flights for that connection.
+
+
+More information is provided there: http://konect.uni-koblenz.de/networks/opsahl-usairport
+
+Files: 
+	meta.opsahl-usairport -- Metadata about the network 
+	out.opsahl-usairport -- The adjacency matrix of the network in space separated values format, with one edge per line. 
+
+	The meaning of the columns in out.opsahl-usairport are: 
+		First column: ID of from node 
+		Second column: ID of to node
+		Third column: edge weight
+
+All files are licensed under a Creative Commons Attribution-ShareAlike 2.0 Germany License.
+For more information concerning license visit http://konect.uni-koblenz.de/license.
+
+
+
+Use the following References for citation:
+
+
+@misc{konect,
+	title = {{KONECT} -- The {Koblenz} {Network} {Collection}},
+	author = {Jérôme Kunegis},
+	year = {2013},
+	howpublished = {konect.uni-koblenz.de},
+	url = {\href{http://konect.uni-koblenz.de/}{konect.uni-koblenz.de}},
+}
+
+
+

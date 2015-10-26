@@ -1,0 +1,9 @@
+category: Physical
+code: AF
+name: US airports
+description: Aiport–airport flights
+entity-names: airport,airport
+extr: opsahl
+url: http://toreopsahl.com/datasets/#usairports
+long-description: This is the directed network of flights between US airports in 2010. A directed edge represents a connection from one airport to another. The weight of an edge shows how many passengers have been transported in total on that connection, cumulated over all flights for that connection.  
+relationship-names: flight
