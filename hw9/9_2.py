@@ -33,16 +33,6 @@ def dfs_rec(graph, start, visited=[]):
 			visited = dfs_rec(graph, node, visited)
   	return visited
 
-def dfs_stack(graph, start):
-	visited = []	
-	stack = [start]
-	while stack:
-	   	node = stack.pop(0)
-		if node not in visited:
-			visited = visited + [node]
-			stack = graph[node] + stack
-	return visited
-
 
 def bfs(graph, start):
 	visited = []
@@ -57,10 +47,23 @@ def bfs(graph, start):
 		rest = [x for x in graph.keys() if x not in visited]
 	return visited + rest
 
+def dfs_stack(graph, start):
+	visited = []	
+	stack = [start]
+	result = []
+	while stack:
+	   	node = stack.pop(0)
+	   	if (node not in graph.keys()) & (node not in visited):
+			visited.append(node)
+		if node not in visited:
+			visited = visited + [node]
+			stack = graph[node] + stack
+		rest = [x for x in graph.keys() if x not in visited]
+	return visited + rest
 
 print dfs_rec(graph_undir, 'A')
-print dfs_stack(graph_undir, 'A')
 print bfs(graph_dir, 'A')
 print bfs(graph_undir, 'A')
+print dfs_stack(graph_dir, 'A')
 
 
